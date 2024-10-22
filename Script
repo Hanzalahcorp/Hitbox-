@@ -1,0 +1,20 @@
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+_G.Resized = true
+
+local Player = game:GetService('Players').LocalPlayer
+local Mouse = Player:GetMouse()
+
+Mouse.KeyDown:Connect(function(Key)
+    if Key == 'f' then
+        _G.Resized = not _G.Resized
+        if _G.Resized == true then
+            Player.Character['LeftHand'].Size = Vector3.new(1, 35, 1)
+            Player.Character['RightHand'].Size = Vector3.new(1, 35, 1)
+        elseif _G.Resized == false then
+            Player.Character['LeftHand'].Size = Vector3.new(1.69351, 1.10182, 0.744331)
+            Player.Character['RightHand'].Size = Vector3.new(0.69334, 1.10182, 0.744331)
+        end
+    end
+end)
